@@ -107,7 +107,7 @@ Where the `...` are denoting more commands.
 * on - Set the nth port to OUTPUT
 * hn - Turns the nth output to HIGH
 * ln - Turns the nth output to LOW
-* If you whish to use an analog pin write an a before the command like: "ah1", will turn the 1st analog output to HIGH
+* If you whish to use an analog pin write an `a` before the command like: `"ah1"`, will turn the 1st analog output to HIGH
 
 ### Examples
 
