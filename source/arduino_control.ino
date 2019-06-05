@@ -13,14 +13,19 @@
 #define AC_ID 1
 
 
-void ac_listen(int baudrate=9600) {
-  if (Serial.available() <= 0) return;
+void ac_listen() {
+  // open with default baudrate
+  ac_listen(9600);
+}
+
+void ac_listen(int baudrate) {
+  if (Serial.available() <= 0) return;  // wait for connection
   String got = Serial.readStringUntil('.');
 
   if (got[0] == 'S') {
     got = got.substring(1, got.length());
   } else {
-    return;
+    return;  // ignore unproper message
   }
 
   if (got[0] == '~') {  // Pass it away without processing
