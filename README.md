@@ -1,5 +1,6 @@
 # ArduinoControl
 
+[![version](https://img.shields.io/badge/version-v1.0.0-brightgreen.svg)](https://github.com/MartinKondor/ArduinoControl)
 [![Project Status](https://img.shields.io/badge/status-active-brightgreen.svg)](https://github.com/MartinKondor/ArduinoControl/)
 [![GitHub Issues](https://img.shields.io/github/issues/MartinKondor/ArduinoControl.svg)](https://github.com/MartinKondor/ArduinoControl/issues)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-blue.svg)
