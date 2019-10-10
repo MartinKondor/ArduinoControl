@@ -23,6 +23,7 @@ First create an empty Arduino IDE project called `testac`:
 
 ```
 void setup() {}
+
 void loop() {}
 ```
 
@@ -39,9 +40,11 @@ As a last step, go back to your `testac.ino` file and change it:
 ```
 void setup() {
     Serial.begin(9600);
+}
+
+void loop() {
     ac_listen(9600);
 }
-void loop() {}
 ``` 
 
 The Serial port must be opened for ArduinoControl and the same baudrate is needed. It is advised to do:
@@ -51,9 +54,11 @@ The Serial port must be opened for ArduinoControl and the same baudrate is neede
 
 void setup() {
     Serial.begin(BAUD_RATE);
+}
+
+void loop() {
     ac_listen(BAUD_RATE);
 }
-void loop() {}
 ```
 
 Now this project is ready to be uploaded to an Arduino and be used with the commands.
@@ -135,7 +140,6 @@ This project is open for any kind of contribution from anyone.
 4. Make your changes
 5. Upload them
 6. Make a pull request here
-7. Profit.
 
 ## Authors
 
