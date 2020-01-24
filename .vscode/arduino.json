@@ -1,0 +1,6 @@
+{
+    "port": "COM11",
+    "board": "4D Systems:avr:duino4",
+    "programmer": "AVRISP mkII",
+    "sketch": "tests\\tests\\tests.ino"
+}

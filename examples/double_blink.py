@@ -3,9 +3,10 @@ import time
 from serial import Serial  # Library needed to open serial connection
 
 
-PIN = 3
+PIN_1 = 3
+PIN_2 = 4
 PORT = 'COM11'
-DELAY_SECONDS = 0.5
+DELAY_SECONDS = 0.05
 PORT = Serial(port=PORT, baudrate=9600, timeout=0)  # Open the Serial port
 
 
@@ -19,10 +20,13 @@ print('AC:', 'Press Ctrl+C to close the program.')
 
 try:
     while True:
-        PORT.write(encode_command('S0|o{0}|h{0}|.'.format(PIN)))  # Set PIN to OUTPUT and HIGH
+        PORT.write(encode_command('S0|o{0}|o{1}|h{0}|l{1}|.'.format(PIN_1, PIN_2)))
         time.sleep(DELAY_SECONDS)
 
-        PORT.write(encode_command('S0|o{0}|l{0}|.'.format(PIN)))  # Set PIN to OUTPUT and LOW
+        PORT.write(encode_command('S0|o{0}|o{1}|l{0}|h{1}|.'.format(PIN_1, PIN_2)))
+        time.sleep(DELAY_SECONDS)
+
+        PORT.write(encode_command('S0|o{0}|o{1}|l{0}|l{1}|.'.format(PIN_1, PIN_2)))
         time.sleep(DELAY_SECONDS)
 
 except KeyboardInterrupt:
