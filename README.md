@@ -1,4 +1,4 @@
-# ArduinoControl
+# ⚙ ArduinoControl
 
 [![version](https://img.shields.io/badge/version-v1.0.0-brightgreen.svg)](https://github.com/MartinKondor/ArduinoControl)
 [![Project Status](https://img.shields.io/badge/status-active-brightgreen.svg)](https://github.com/MartinKondor/ArduinoControl/)
@@ -12,7 +12,7 @@ A library for controlling arduino from the serial port, working with any program
 
 ### Prerequisites
 
-* Arduino
+* Arduino compatible board
 * Arduino IDE (optional)
 
 ## Deployment
@@ -61,9 +61,9 @@ void loop() {
 }
 ```
 
-Now this project is ready to be uploaded to an Arduino and be used with the commands.
+Now this project is ready to be uploaded to a board and be used with the commands.
 
-After the upload go to this project's directory and check the `examples/blink.py` for the python example.
+After the upload go to this project's directory and check the `examples/` folder for more examples.
 
 ## Commands
 
