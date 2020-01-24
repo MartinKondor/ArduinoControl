@@ -1,6 +1,6 @@
 # ⚙ ArduinoControl
 
-[![version](https://img.shields.io/badge/version-v1.0.0-brightgreen.svg)](https://github.com/MartinKondor/ArduinoControl)
+[![version](https://img.shields.io/badge/version-v1.1.0-brightgreen.svg)](https://github.com/MartinKondor/ArduinoControl)
 [![Project Status](https://img.shields.io/badge/status-active-brightgreen.svg)](https://github.com/MartinKondor/ArduinoControl/)
 [![GitHub Issues](https://img.shields.io/github/issues/MartinKondor/ArduinoControl.svg)](https://github.com/MartinKondor/ArduinoControl/issues)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-blue.svg)
@@ -104,28 +104,31 @@ Where the `...` are denoting more commands.
 
 ### Parts of a message
 
-* S~ - Pass away, do nothing
-* S - Start of message
-* . - End of message
-* in - Set the nth port to INPUT
-* in - Set the nth port to INPUT_PULLUP
-* on - Set the nth port to OUTPUT
-* hn - Turns the nth output to HIGH
-* ln - Turns the nth output to LOW
-* If you whish to use an analog pin write an `a` before the command like: `"ah1"`, will turn the 1st analog output to HIGH
+* **S~** - Pass away, do nothing.
+* **S** - Start of message.
+* **.** - End of message.
+* **rn** - Read from the nth port.
+* **in** - Set the nth port to INPUT.
+* **in** - Set the nth port to INPUT_PULLUP.
+* **on** - Set the nth port to OUTPUT.
+* **hn** - Turns the nth output to HIGH.
+* **ln** - Turns the nth output to LOW.
+* If you whish to use an analog pin write an `a` before the command like: `"ah1"`, will turn the 1st analog output to HIGH.
 
 ### Examples
 
  * `"S0|o7|h7|."` - For all arduino (0), set 7 to OUPUT (o7), and turn it on (h7)
  * `"S2|ao1|ah1|."` - For the arduino numbered with (2), set Analog 1 to OUPUT (ao1), and turn it on (ah1)
  * `"S1|o1|h1|o2|l2|."` - For the arduino numbered with 1 (1), set 1 to OUPUT (o1), and turn it on (h1), then set 2 to OUTPUT (o2), and turn it off (l2)
+ * `"S4|i4|r4|."` - For the arduino numbered with 4 (4), set 4 to INPUT (i4), and read the digital value of it (r4).
 
 ## Tested boards
 
-This software can be used with any programable arduino board, but we only tested these: 
+This software can be used with any programable arduino compatible board, but we only tested these: 
 
-* [Arduino Uno](https://store.arduino.cc/arduino-uno-rev3)
-* [Arduino Mega 2560](https://store.arduino.cc/mega-2560-r3)
+* [Arduino, Uno](https://store.arduino.cc/arduino-uno-rev3)
+* [Arduino, Mega 2560](https://store.arduino.cc/mega-2560-r3)
+* [4D Systems, 4duino](https://store.arduino.cc/mega-2560-r3)
 
 
 ## Contributing
@@ -145,7 +148,16 @@ This project is open for any kind of contribution from anyone.
 
 * **[Martin Kondor](https://github.com/MartinKondor)**
 
-<p align="center"><a href="https://www.patreon.com/bePatron?u=17006186" data-patreon-widget-type="become-patron-button"><img width="222" class="img-responsive" alt="Become a Patron!" title="Become a Patron!" src="https://martinkondor.github.io/img/become_a_patron_button.png"></a></p>
+<p align="center">
+<a title="Fiverr" href="https://www.fiverr.com/martinkondor">
+<img id="fiverr-img" class="img-responsive" alt="Hire me on fiverr!" title="Hire me on fiverr!" src="https://martinkondor.github.io/img/hire_me_on_fiverr_button.png" width="222">
+</a>
+</p>
+
+<p align="center">
+<a href="https://www.patreon.com/bePatron?u=17006186" data-patreon-widget-type="become-patron-button"><img width="222" class="img-responsive" alt="Become a Patron!" title="Become a Patron!" src="https://martinkondor.github.io/img/become_a_patron_button.png">
+</a>
+</p>
 
 ## License
 
